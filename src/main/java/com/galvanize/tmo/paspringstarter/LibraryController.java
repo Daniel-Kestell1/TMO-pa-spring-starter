@@ -1,6 +1,7 @@
 package com.galvanize.tmo.paspringstarter;
 
 import com.tmo.books.Book;
+import com.tmo.books.Books;
 import com.tmo.books.LibraryBook;
 import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +23,8 @@ public class LibraryController {
 
 
     @GetMapping
-    public List<LibraryBook> showLibrary(){
-        return libraryService.showLibrary();
+    public Books showLibrary(){
+        return new Books(libraryService.showLibrary());
     }
 
     @PostMapping
