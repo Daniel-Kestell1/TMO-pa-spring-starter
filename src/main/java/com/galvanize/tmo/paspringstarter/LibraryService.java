@@ -19,6 +19,10 @@ public class LibraryService {
 
     @GetMapping
     public List<LibraryBook> showLibrary(){
+
+        if(library == null){
+            library = new TreeMap<>();
+        }
         List<LibraryBook> outputBooks = new ArrayList<>();
         for(Map.Entry<String,LibraryBook> entry : library.entrySet()){
             outputBooks.add(entry.getValue());
