@@ -27,6 +27,7 @@ public class LibraryController {
     }
 
     @PostMapping
+    @ResponseStatus(value = HttpStatus.CREATED)
     public LibraryBook addNewBook(@RequestBody  Book book){
         System.out.println("Adding New Book");
         return libraryService.addNewBook(book);
