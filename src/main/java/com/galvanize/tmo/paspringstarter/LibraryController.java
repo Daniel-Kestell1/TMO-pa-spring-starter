@@ -30,7 +30,7 @@ public class LibraryController {
     @ResponseStatus(value = HttpStatus.CREATED)
     public LibraryBook addNewBook(@RequestBody  Book book){
         System.out.println("Client POST");
-        System.out.println(book);
+        System.out.println(book.getTitle() + " , ");
 
 
 
